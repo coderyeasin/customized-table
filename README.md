@@ -15,3 +15,9 @@ npm install
 ```
 npm run dev
 ```
+
+## Deployed
+
+Check it out : [CustomizedTable](https://customized-table.vercel.app/).
+
+## **Happy Journey!**
