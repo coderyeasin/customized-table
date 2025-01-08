@@ -14,8 +14,8 @@ const CustomTable = () => {
 
   // Function to fetch data from the API
   const fetchData = async (page = 1, search = "", rowsPerPage = 10) => {
-    setLoading(true); // Set loading to true
-    setError(null); // Reset any previous errors
+    setLoading(true);
+    setError(null);
     try {
       const response = await fetch(
         `https://api.razzakfashion.com/?paginate=${rowsPerPage}&search=${search}&page=${page}`
@@ -25,16 +25,16 @@ const CustomTable = () => {
       }
       const result = await response.json();
 
-      console.log("Fetched data:", result); // Log the response data for debugging
+      // console.log("Fetched data:", result);
 
-      setData(result.data); // Set fetched data to state
-      setTotalItems(result.total); // Set the total item count
-      setTotalPages(result.last_page); // Set the total number of pages
+      setData(result.data);
+      setTotalItems(result.total);
+      setTotalPages(result.last_page);
     } catch (error) {
       console.error("Error fetching data:", error);
-      setError(error.message); // Set error message
+      setError(error.message);
     } finally {
-      setLoading(false); // Set loading to false once the API call is complete
+      setLoading(false);
     }
   };
 

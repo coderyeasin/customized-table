@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Button from "../ReusableComponents/Button";
 
 const Pagination = ({
   currentPage,
@@ -49,42 +50,43 @@ const Pagination = ({
 
       {/* Pagination Buttons */}
       <div className="flex items-center">
-        <button
+        <Button
           onClick={() => handlePageChange(1)}
           disabled={currentPage === 1}
-          className={`px-4 py-2 mx-2 bg-gray-300 rounded ${
+          className={` ${
             currentPage === 1 ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
           {"<<"}
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className={`px-4 py-2 mx-2 bg-gray-300 rounded ${
+          className={` ${
             currentPage === 1 ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
           {"<"}
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className={`px-4 py-2 mx-2 bg-gray-300 rounded ${
+          className={` ${
             currentPage === totalPages ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
           {">"}
-        </button>
-        <button
+        </Button>
+
+        <Button
           onClick={() => handlePageChange(totalPages)}
           disabled={currentPage === totalPages}
-          className={`px-4 py-2 mx-2 bg-gray-300 rounded ${
+          className={` ${
             currentPage === totalPages ? "cursor-not-allowed" : "cursor-pointer"
           }`}
         >
           {">>"}
-        </button>
+        </Button>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 
 interface TableCell {
   children: ReactNode;
-  className?: String;
+  className?: string;
   onClick?: () => void;
 }
 export const Th = ({ children, className }: TableCell) => (
